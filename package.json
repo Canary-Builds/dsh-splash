@@ -1,0 +1,33 @@
+{
+  "name": "dsh-plugin-splash",
+  "version": "1.0.0",
+  "description": "Mobile/PWA-first redesign for the DeepSeek Harness web GUI: ChatGPT-style collapsible sidebar with a floating whale launcher, fullscreen overlay sidebar, compact top bar (icon-only session-log export, abbreviated mode chips), fullscreen settings sheet with icon-only nav, full-width user bubbles, and a standalone-window PWA manifest.",
+  "license": "MIT",
+  "type": "module",
+  "main": "./lib/index.js",
+  "exports": {
+    ".": "./lib/index.js",
+    "./client": "./lib/client.js",
+    "./package.json": "./package.json"
+  },
+  "files": [
+    "lib",
+    "README.md"
+  ],
+  "keywords": [
+    "dsh",
+    "deepseek-harness",
+    "cordis",
+    "pwa",
+    "ui"
+  ],
+  "dsh": {
+    "client": {
+      "platform": "web",
+      "inject": [
+        "@deepseek-ai/dsh-client-runtime",
+        "@deepseek-ai/dsh-client-ui-layout"
+      ]
+    }
+  }
+}
