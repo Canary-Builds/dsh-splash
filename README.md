@@ -1,12 +1,12 @@
 # dsh-plugin-splash
 
-A mobile/PWA-first UI redesign for the [DeepSeek Harness](https://github.com/deepseek-ai/deepseek-harness) (DSH) web GUI, delivered as one Cordis plugin with a host half and a browser half. ChatGPT-inspired: the sidebar gets out of your way, the reading area wins, and the app installs as a proper standalone window.
+A mobile/PWA-first UI redesign for the [DeepSeek Harness](https://github.com/deepseek-ai/deepseek-harness) (DSH) web GUI, delivered as one Cordis plugin with a host half and a browser half. minimal, app-like: the sidebar gets out of your way, the reading area wins, and the app installs as a proper standalone window.
 
 Everything visual is scoped to app windows and touch devices (`display-mode: standalone/fullscreen/minimal-ui`, or `hover:none` + `pointer:coarse`). **Desktop browser tabs are untouched** and render the stock UI.
 
 ## Features
 
-**Sidebar (ChatGPT-style)**
+**Sidebar (app-style)**
 - Collapsing the sidebar hides the 56px icon rail entirely — the chat area spans the full screen width
 - A floating whale launcher (the DSH whale mark, theme-following) appears centered in the first column's header band; click to expand
 - Expanding opens the sidebar as a **fullscreen overlay** covering the chat instead of pushing it
