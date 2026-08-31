@@ -29,5 +29,13 @@
         "@deepseek-ai/dsh-client-ui-layout"
       ]
     }
-  }
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Canary-Builds/dsh-splash.git"
+  },
+  "bugs": {
+    "url": "https://github.com/Canary-Builds/dsh-splash/issues"
+  },
+  "homepage": "https://github.com/Canary-Builds/dsh-splash#readme"
 }
