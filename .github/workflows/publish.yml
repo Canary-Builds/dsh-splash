@@ -1,0 +1,26 @@
+name: Publish to npm
+
+on:
+  push:
+    tags:
+      - "v*"
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  id-token: write
+
+jobs:
+  publish:
+    runs-on: ubuntu-latest
+    environment: npm
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          registry-url: https://registry.npmjs.org
+      - name: Use latest npm (trusted publishing needs npm >= 11.5)
+        run: npm install -g npm@latest
+      - name: Publish (OIDC trusted publishing — no token)
+        run: npm publish --provenance --access public
