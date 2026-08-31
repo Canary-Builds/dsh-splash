@@ -1,6 +1,6 @@
 {
   "name": "dsh-plugin-splash",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "Mobile/PWA-first redesign for the DeepSeek Harness web GUI: app-style collapsible sidebar with a floating whale launcher, fullscreen overlay sidebar, compact top bar (icon-only session-log export, abbreviated mode chips), fullscreen settings sheet with icon-only nav, full-width user bubbles, and a standalone-window PWA manifest.",
   "license": "MIT",
   "type": "module",

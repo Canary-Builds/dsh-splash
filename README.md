@@ -29,27 +29,32 @@ Everything visual is scoped to app windows and touch devices (`display-mode: sta
 
 ## Install
 
+**One command** (installs into the default `web` profile; pass another profile name as the first argument if yours differs):
+
+```bash
+curl -fsSL https://raw.githubusercontent.com/Canary-Builds/dsh-splash/main/install.sh | bash
+```
+
+Then restart DSH. The installer is idempotent — safe to re-run. Updates: re-run the installer (it installs the latest published version), then restart.
+
+<details><summary>Manual install</summary>
+
 In your DSH profile (e.g. `~/.dsh/profiles/web/`):
 
-1. Add the package as a workspace dependency in the profile's `package.json`:
-
-   ```json
-   "dependencies": {
-     "dsh-plugin-splash": "workspace:./packages/whale"
-   }
-   ```
-
-   (or install from a registry once published, then reference the package name)
+1. Install the package: `dsh plugin --profile web add dsh-plugin-splash`
+   (the profile is a pnpm workspace — use the `dsh plugin` wrapper, not raw npm)
 
 2. Add the composition row to the profile's `cordis.patch.yml`:
 
    ```yaml
    - insert:
-       - id: whale
+       - id: splash
          name: dsh-plugin-splash
-   ```
+       ```
 
-3. `pnpm install` in the profile directory, then restart the profile. No other wiring — the host half registers its route, the browser half is discovered through the standard `dsh.client` scan.
+3. Restart the profile. No other wiring — the host half registers its route, the browser half is discovered through the standard `dsh.client` scan.
+
+</details>
 
 ## Compatibility
 
